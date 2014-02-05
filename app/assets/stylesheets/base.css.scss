@@ -1,0 +1,30 @@
+@import "includes";
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap:break-word;
+}
+
+body {
+  width:$widescreen;
+  margin:0 auto;
+
+  @media (max-width: $widescreen - 1) {
+    & {
+      width:$desktop;
+    }
+  }
+  @media (max-width: $desktop - 1) {
+    & {
+      width:$tablet;
+    }
+  }
+  @media (max-width: $tablet - 1) {
+    & {
+      width:auto;
+    }
+  }
+}
+

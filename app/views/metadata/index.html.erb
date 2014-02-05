@@ -1,0 +1,39 @@
+<h1>Listing metadata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Page</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Keywords</th>
+      <th>Og title</th>
+      <th>Og description</th>
+      <th>Primary widget</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metadata.each do |metadatum| %>
+      <tr>
+        <td><%= metadatum.page_id %></td>
+        <td><%= metadatum.title %></td>
+        <td><%= metadatum.description %></td>
+        <td><%= metadatum.keywords %></td>
+        <td><%= metadatum.og_title %></td>
+        <td><%= metadatum.og_description %></td>
+        <td><%= metadatum.primary_widget_id %></td>
+        <td><%= link_to 'Show', metadatum %></td>
+        <td><%= link_to 'Edit', edit_metadatum_path(metadatum) %></td>
+        <td><%= link_to 'Destroy', metadatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metadatum', new_metadatum_path %>

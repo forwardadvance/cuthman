@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @widget.page_id %>
+</p>
+
+<p>
+  <strong>Template location:</strong>
+  <%= @widget.template_location %>
+</p>
+
+<p>
+  <strong>Resource:</strong>
+  <%= @widget.resource_id %>
+</p>
+
+<p>
+  <strong>Resource type:</strong>
+  <%= @widget.resource_type %>
+</p>
+
+<%= link_to 'Edit', edit_widget_path(@widget) %> |
+<%= link_to 'Back', widgets_path %>

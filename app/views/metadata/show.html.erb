@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @metadatum.page_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @metadatum.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @metadatum.description %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @metadatum.keywords %>
+</p>
+
+<p>
+  <strong>Og title:</strong>
+  <%= @metadatum.og_title %>
+</p>
+
+<p>
+  <strong>Og description:</strong>
+  <%= @metadatum.og_description %>
+</p>
+
+<p>
+  <strong>Primary widget:</strong>
+  <%= @metadatum.primary_widget_id %>
+</p>
+
+<%= link_to 'Edit', edit_metadatum_path(@metadatum) %> |
+<%= link_to 'Back', metadata_path %>

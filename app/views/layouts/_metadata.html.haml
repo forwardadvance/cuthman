@@ -1,0 +1,8 @@
+-if @page
+  - metadata = @page.metadatum
+  %title= [metadata.title, "St Cuthman's Whitehawk"].join(" - ")
+  -if metadata.description
+    %meta{ name: "description", value: metadata.description }
+-else
+  %title "St Cuthman's Whitehawk"
+= csrf_meta_tags

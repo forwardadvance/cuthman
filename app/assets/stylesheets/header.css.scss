@@ -1,0 +1,50 @@
+@import 'includes';
+
+header {
+  h1 {
+    border-bottom:1px solid $keyline_grey;
+    margin:0;
+    padding:$gutter 0;
+    margin:0 $gutter;
+  }
+
+  nav {
+    @include clearfix;
+    ul, li {
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    li {
+      width:$widescreen/4;
+      text-align:center;
+      float:left;
+
+    }
+    a {
+      color:$header_grey;
+      text-decoration:none;
+      display:block;
+      border-bottom:1px solid $keyline_grey;
+      margin:0 $gutter;
+      padding:$gutter;
+    }
+
+    @media (max-width: $widescreen - 1) {
+      li {
+        width:$desktop/4;
+      }
+    }
+    @media (max-width: $desktop - 1) {
+      li {
+        width:$tablet/4;
+      }
+    }
+    @media (max-width: $tablet - 1) {
+      li {
+        width:auto;
+        float:none;
+      }
+    }
+  }
+}
