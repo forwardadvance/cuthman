@@ -1,0 +1,7 @@
+@import 'includes';
+.highlight_slots {
+  .slot {
+    border:1px dotted $keyline_grey;
+    min-height:$gutter*2;
+  }
+}

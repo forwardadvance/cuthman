@@ -11,7 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205143340) do
+ActiveRecord::Schema.define(version: 20140208231420) do
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.text     "intro"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+
+  create_table "maps", force: true do |t|
+    t.float    "lat"
+    t.float    "lng"
+    t.integer  "zoom"
+    t.string   "type"
+    t.text     "address"
+    t.string   "tel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "metadata", force: true do |t|
     t.integer  "page_id"
@@ -44,7 +79,7 @@ ActiveRecord::Schema.define(version: 20140205143340) do
 
   create_table "widgets", force: true do |t|
     t.integer  "page_id"
-    t.string   "location"
+    t.string   "slot"
     t.integer  "resource_id"
     t.string   "resource_type"
     t.datetime "created_at"

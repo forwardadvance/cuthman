@@ -12,5 +12,8 @@
  *= require typography
  *= require header
  *= require footer
+ *= require slots
+ *= require widgets
+ *= require slot_controls
  *= require_tree ./templates/.
  */

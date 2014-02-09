@@ -40,6 +40,8 @@ gem 'delayed_job_active_record'
 gem "factory_girl_rails"
 gem 'rspec-rails'
 
+gem 'jquery-turbolinks'
+
 group :development do
   gem "letter_opener"
 end

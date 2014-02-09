@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @map.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @map.lng %>
+</p>
+
+<p>
+  <strong>Zoom:</strong>
+  <%= @map.zoom %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @map.type %>
+</p>
+
+<%= link_to 'Edit', edit_map_path(@map) %> |
+<%= link_to 'Back', maps_path %>

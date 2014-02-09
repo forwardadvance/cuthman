@@ -1,0 +1,5 @@
+@import 'includes';
+.slot {
+  margin: $gutter;
+  @include clearfix;
+}

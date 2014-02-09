@@ -1,4 +1,8 @@
 Cuthman::Application.routes.draw do
+  resources :articles
+
+  resources :maps
+
   resources :news
   resources :metadata
   resources :widgets
