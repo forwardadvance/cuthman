@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 20140208231420) do
     t.string   "slot"
     t.integer  "resource_id"
     t.string   "resource_type"
+    t.string   "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
