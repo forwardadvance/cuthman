@@ -1,5 +1,55 @@
 @import 'includes';
 .slot {
-  margin: $gutter;
+  position:relative;
+  margin: $gutter/2 0;
+  padding: 0 $gutter/2;
   @include clearfix;
+  &.third {
+    float:left;
+    width: $widescreen/3;
+    height: $widescreen/3;
+    @media (max-width: $widescreen - 1) {
+      & {
+        width: $desktop/3;
+        height: $desktop/3;
+      }
+    }
+    @media (max-width: $desktop - 1) {
+      & {
+        width: $tablet/3;
+        height: $tablet/3;
+      }
+    }
+    @media (max-width: $tablet - 1) {
+      & {
+        width:auto;
+      }
+    }
+  }
+  &.widescreen {
+    width:auto;
+    clear:both;
+  }
+
+  &.desktop {
+    width: $desktop/3;
+    clear:both;
+    @media (max-width: $desktop - 1) {
+      & {
+        width: $tablet/3;
+        height: $tablet/3;
+      }
+    }
+    @media (max-width: $tablet - 1) {
+      & {
+        width:auto;
+      }
+    }
+  }
+  a.new {
+    @include edit_link;
+    position:absolute;
+    left:0;
+    top:0;
+  }
 }

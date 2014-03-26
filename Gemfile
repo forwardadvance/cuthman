@@ -31,16 +31,18 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem "cuthman_rails", :path => "./vendor/gems/cuthman_rails"
 
-gem "carrierwave"
+gem "paperclip"
 gem 'RedCloth'
 gem "haml"
 gem 'delayed_job'
 gem 'delayed_job_active_record'
+gem "font-awesome-rails"
 
 gem "factory_girl_rails"
 gem 'rspec-rails'
 
 gem 'jquery-turbolinks'
+gem 'tinymce-rails'
 
 group :development do
   gem "letter_opener"

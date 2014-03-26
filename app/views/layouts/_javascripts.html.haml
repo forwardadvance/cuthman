@@ -1,2 +1,4 @@
 = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBrVM49HIt4r0jJjIu4lTkptIqMyVjs0lw&sensor=false"
 = javascript_include_tag "application", "data-turbolinks-track" => true
+-if admin_user?
+  = javascript_include_tag "admin", "data-turbolinks-track" => true

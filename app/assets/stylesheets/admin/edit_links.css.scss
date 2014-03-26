@@ -1,0 +1,25 @@
+@import 'includes';
+
+a.edit_page, a.add_page {
+  @include transition;
+  font-size:2em;
+  position:absolute;
+  top:$gutter;
+  left:$gutter;
+  color:$white;
+  display: block;
+  padding:$gutter;
+  background:$edit_link_color;
+  i {
+    display:inline-block;
+    width:1em;
+  }
+  &:hover {
+    // background:$edit_link_hover_color;
+    @include transition;
+  }
+  &.selected {
+    // background:$edit_link_highlight_color;
+  }
+}
+

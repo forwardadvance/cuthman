@@ -1,17 +1,37 @@
 @import 'includes';
 
+$base_font_size: 1em;
+$scaling_factor:1.5;
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size:110%;
   font-weight:400;
   color:$body_grey;
+  line-height:2em;
+  letter-spacing:0.02em;
 }
 
 h1, h2, h3, h4, h5, h6, b, strong {
   font-weight:900;
   font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing:0.1em;
+  font-size:$base_font_size;
 }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform:uppercase;
   color:$header_grey;
+}
+
+h1 {
+  font-size:$base_font_size * $scaling_factor * $scaling_factor;
+  line-height:1.1em;
+  color:lighten($body_grey, 30%);
+}
+
+h2, h3 {
+  font-size:$base_font_size * $scaling_factor;
+  line-height:1.1em;
+  color:lighten($body_grey, 30%);
 }

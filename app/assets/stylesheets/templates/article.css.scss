@@ -3,34 +3,4 @@
 .article_template {
   max-width: $desktop;
   margin:0 auto;
-  .map {
-    float:left;
-    border:1px solid $keyline_grey;
-  }
-  address {
-    float:right;
-    a {
-      display:block;
-    }
-  }
-
-  .map, address {
-    $size:$desktop/2-$gutter*2;
-    width:$size;
-    height:$size;
-    @media (max-width: $desktop - 1) {
-      & {
-        $size:$tablet/2-$gutter*2;
-        width:$size;
-        height:$size;
-      }
-    }
-    @media (max-width: $tablet - 1) {
-      & {
-        width:auto;
-        float:none;
-        height:200px;
-      }
-    }
-  }
 }

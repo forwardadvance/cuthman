@@ -1,3 +1,16 @@
-.widget {
+@import 'includes';
 
+.widget {
+  position:relative;
+  a.edit, a.destroy {
+    position:absolute;
+    top:0;
+    @include edit_link;
+  }
+  a.edit {
+    left:0;
+  }
+  a.destroy {
+    right:0;
+  }
 }

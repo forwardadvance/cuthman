@@ -5,5 +5,8 @@ module ActiveRecord
         Widget.register_widget self
       end
     end
+    def place_widget_on
+
+    end
   end
 end

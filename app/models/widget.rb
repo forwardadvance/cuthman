@@ -14,6 +14,9 @@ class Widget < ActiveRecord::Base
     end
   end
 
+  validates_presence_of :page, message: "Sorry, we couldn't find the page. Please try again."
+  validates_presence_of :resource_type, :resource_id, message: "Please select a piece of content"
+
   def resource
     resource_type.constantize.find(resource_id)
   end

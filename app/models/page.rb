@@ -27,6 +27,16 @@ class Page < ActiveRecord::Base
 
   end
 
+  def path
+    el = self
+    path = ""
+    while el.parent_id
+      path << "/#{el.slug}"
+      el = el.parent
+    end
+    path
+  end
+
   def make_metadata
     self.metadatum = Metadatum.create title: slug.titleize
     self.save

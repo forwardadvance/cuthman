@@ -6,4 +6,12 @@ class ApplicationController < ActionController::Base
   def not_found
     render :file => "error/404", :status => :not_found
   end
+
+  def logged_in?
+    true
+  end
+
+  def last_edited_page_path
+    (Page.find_by_id(session[:page_id]) || Page.root).path
+  end
 end

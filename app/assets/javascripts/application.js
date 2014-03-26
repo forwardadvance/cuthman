@@ -14,4 +14,8 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= require add_widget
+//= require cuthman
 //= require maps
+//= require pages
+

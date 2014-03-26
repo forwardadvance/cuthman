@@ -1,0 +1,17 @@
+= form_for([:admin, @widget]) do |f|
+  = error_messages_for @widget
+  = f.number_field :page_id
+  = f.text_field :slot
+  = f.number_field :resource_id
+  = f.text_field :resource_type
+  = f.submit
+
+
+  -[@news, @maps, @articles].each do |collection|
+    -if collection.length > 0
+      %h2= collection[0].class.to_s.pluralize.titleize
+      %ul.content
+        -collection.each do |resource|
+          %li
+            %a{ href: "#", data: { resource_type: resource.class.to_s, resource_id: resource.id } }
+              =resource.title

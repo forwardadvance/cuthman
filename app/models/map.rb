@@ -10,4 +10,8 @@ class Map < ActiveRecord::Base
     # self.place_widget_on Page.find_by_slug('news'), :list, :start
   end
 
+  def title
+    self.address
+  end
+
 end

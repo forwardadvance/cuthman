@@ -1,0 +1,24 @@
+pages:
+  home:
+    template: "homepage"
+  news:
+    parent_id: home.id
+    template: "article"
+  about:
+    parent_id: home.id
+    template: "article"
+  podcast:
+    parent_id: home.id
+    template: "article"
+
+articles:
+  vision:
+    title: '&ldquo;The Vision of St Cuthman’s alive in Brighton&rdquo;'
+    intro: "<p>We are delighted to welcome you to this great adventure</p>"
+    content: "<p>We are delighted to welcome you to this great adventure - an Anglican church in new partnership with St Peter’s Brighton since November 2013. We are building a fun community in the heart of Whitehawk, with a vision to play our part in the re-evangelisation of the nations and the transformation of society. Feel free to join us at one of our two Sunday services.</p><p>If you would like to explore the meaning of life in an informal environment, we would love to invite you to join the next Alpha course.</p><p>We have Teams which are great places to connect and to see the vision of St Cuthman’s alive in Brighton. During the week we get together in Hubs - fortnightly gatherings of anything between 10-20 people, for food, friends, teaching, worship and prayer - the ideal way to feel like you belong.</p><p>For anything else, please check out the Facebook page, and don't hesitate to contact us.</p>"
+    widgets:
+      about_page:
+        slot:'main'
+        sort:1
+
+maps:

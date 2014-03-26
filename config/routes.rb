@@ -1,15 +1,22 @@
 Cuthman::Application.routes.draw do
-  resources :articles
 
-  resources :maps
+  namespace :admin do
+    resources :widgets, only: [:new, :create, :edit, :update, :destroy]
 
-  resources :news
-  resources :metadata
-  resources :widgets
-  resources :pages
+    resources :articles
+
+    resources :maps
+
+    resources :news
+
+    resources :metadata
+
+    resources :pages
+  end
 
   root 'pages#show'
   get '*path' => 'pages#show'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -10,10 +10,13 @@
  *
  *= require base
  *= require typography
+ *= require font-awesome
+ *= require font_awesome_overrides
  *= require header
  *= require footer
  *= require slots
  *= require widgets
+ *= require maps
  *= require slot_controls
  *= require_tree ./templates/.
  */
