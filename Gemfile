@@ -32,6 +32,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem "cuthman_rails", :path => "./vendor/gems/cuthman_rails"
 
 gem "paperclip"
+gem 'aws-sdk'
 gem 'RedCloth'
 gem "haml"
 gem 'delayed_job'

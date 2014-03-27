@@ -1,6 +1,7 @@
 @import "includes";
 
-.article_template {
-  max-width: $desktop;
-  margin:0 auto;
+.article_widget {
+  img {
+    width:100%;
+  }
 }

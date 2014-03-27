@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def admin_user?
-    true
+    false
   end
   alias_method :admin?, :admin_user?
 

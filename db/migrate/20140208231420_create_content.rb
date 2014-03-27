@@ -21,6 +21,7 @@ class CreateContent < ActiveRecord::Migration
       zoom: 10,
       address: "St Cuthman's Church<br/>Whitehawk Way<br/>Whitehawk<br/>BN2 5HE",
       tel:"01273 555555"
+
     Widget.create page: about_page,
       slot:'main',
       resource_type: Map.to_s,
@@ -31,7 +32,7 @@ class CreateContent < ActiveRecord::Migration
     # Services
     @page = Page.new slug:"sunday", template:"article"
 
-    article = Article.create title: "Sunday services"
+    article = Article.create title: "Sunday services",
       intro:"Services take place every Sunday at 9:00 and 11:00",
       content:"<p>9am-Holy Communion</p>
 <p>The Eleven-Informal service with café (including groups for children)</p>

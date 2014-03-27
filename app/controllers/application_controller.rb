@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    true
+    false
   end
 
   def last_edited_page_path

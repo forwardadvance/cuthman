@@ -1,6 +1,0 @@
-
-.map_container
-  .map{data: {lat:@map.lat, lng: @map.lng, zoom: @map.zoom, type: @map.type}}
-%address
-  =@map.address.html_safe
-  %a{ href: "tel:+#{@map.tel}"}= @map.tel

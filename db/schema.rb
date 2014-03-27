@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208231342) do
+ActiveRecord::Schema.define(version: 20140208231420) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "intro"
     t.text     "content"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140208231342) do
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
   create_table "maps", force: true do |t|
+    t.string   "title"
     t.float    "lat"
     t.float    "lng"
     t.integer  "zoom"
@@ -64,6 +69,10 @@ ActiveRecord::Schema.define(version: 20140208231342) do
     t.string   "title"
     t.text     "intro"
     t.text     "content"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

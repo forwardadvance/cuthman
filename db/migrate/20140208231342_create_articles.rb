@@ -4,7 +4,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.text :intro
       t.text :content
-      t.add_attachment :image
+      t.attachment :image
 
       t.timestamps
     end
