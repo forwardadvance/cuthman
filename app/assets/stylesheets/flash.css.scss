@@ -1,6 +1,15 @@
 @import 'includes';
-.flash.error {
-  background:$red;
+.flash {
   color:$white;
   padding:$gutter;
+  margin:$gutter;
+  &.error {
+    background:$red;
+  }
+  &.success {
+    background:$green;
+  }
+  &.notice {
+    background:$green;
+  }
 }

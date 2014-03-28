@@ -1,6 +1,5 @@
 -[:error, :notice, :success].each do |type|
   - if flash[type]
-    .slot.article
-      .flash{ class: type.to_s }
-        =flash[type]
+    .flash{ class: type.to_s }
+      =flash[type]
 
