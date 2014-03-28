@@ -1,0 +1,14 @@
+= form_for [:admin, @image], :html => { :multipart => true } do |f|
+
+  = error_messages_for @image
+
+  = f.label :title
+  = f.text_field :title
+
+  = f.label :image
+  = f.file_field :image
+
+  = f.label :banner
+  = f.file_field :banner
+
+  = f.submit

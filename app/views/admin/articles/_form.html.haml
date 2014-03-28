@@ -1,5 +1,6 @@
 = form_for [:admin, @article], :html => { :multipart => true } do |f|
-  =error_messages_for @article
+
+  = error_messages_for @article
 
   = f.label :title
   = f.text_field :title

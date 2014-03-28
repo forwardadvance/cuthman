@@ -4,7 +4,7 @@ class Admin::ImagesController < ApplicationController
   # GET /admin/images
   # GET /admin/images.json
   def index
-    @images = Admin::Image.all
+    @images = Image.all
   end
 
   # GET /admin/images/1
@@ -14,7 +14,7 @@ class Admin::ImagesController < ApplicationController
 
   # GET /admin/images/new
   def new
-    @image = Admin::Image.new
+    @image = Image.new
   end
 
   # GET /admin/images/1/edit
@@ -24,7 +24,7 @@ class Admin::ImagesController < ApplicationController
   # POST /admin/images
   # POST /admin/images.json
   def create
-    @image = Admin::Image.new(image_params)
+    @image = Image.new(image_params)
 
     respond_to do |format|
       if @image.save
@@ -64,7 +64,7 @@ class Admin::ImagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_image
-      @image = Admin::Image.find(params[:id])
+      @image = Image.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
