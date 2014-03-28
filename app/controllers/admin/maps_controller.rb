@@ -28,7 +28,7 @@ class Admin::MapsController < ApplicationController
 
     respond_to do |format|
       if @map.save
-        format.html { redirect_to @map, notice: 'Map was successfully created.' }
+        format.html { redirect_to last_edited_page_path, notice: 'Map was successfully created.' }
         format.json { render action: 'show', status: :created, location: @map }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class Admin::MapsController < ApplicationController
   def update
     respond_to do |format|
       if @map.update(map_params)
-        format.html { redirect_to @map, notice: 'Map was successfully updated.' }
+        format.html { redirect_to last_edited_page_path, notice: 'Map was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

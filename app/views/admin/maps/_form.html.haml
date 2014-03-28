@@ -1,0 +1,18 @@
+= form_for([:admin, @map]) do |f|
+
+  =error_messages_for @map
+
+
+  = f.label :lat
+  = f.number_field :lat
+
+  = f.label :lng
+  = f.number_field :lng
+
+  = f.label :zoom
+  = f.number_field :zoom
+
+  = f.label :type
+  = f.text_field :type
+
+  = f.submit
