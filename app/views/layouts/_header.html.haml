@@ -1,6 +1,7 @@
 %header
   %h1
-    =image_tag asset_path("logo.jpg"), alt: "St Cuthman's Whitehawk"
+    =link_to root_path do
+      =image_tag asset_path("logo.jpg"), alt: "St Cuthman's Whitehawk"
   %nav
     %ul
       %li= link_to "Home", "/"

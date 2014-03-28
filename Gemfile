@@ -32,7 +32,6 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem "cuthman_rails", :path => "./vendor/gems/cuthman_rails"
 
 gem "paperclip"
-gem 'aws-sdk'
 gem 'RedCloth'
 gem "haml"
 gem 'delayed_job'
@@ -40,8 +39,6 @@ gem 'delayed_job_active_record'
 gem "font-awesome-rails"
 gem 'bcrypt', '~> 3.1.7'
 
-gem "factory_girl_rails"
-gem 'rspec-rails'
 
 gem 'jquery-turbolinks'
 gem 'tinymce-rails'
@@ -53,6 +50,8 @@ end
 group :test, :development do
   gem 'debugger'
   gem 'sqlite3'
+  gem "factory_girl_rails"
+  gem 'rspec-rails'
 end
 
 group :production do

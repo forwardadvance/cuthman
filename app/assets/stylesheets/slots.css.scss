@@ -67,13 +67,5 @@
       }
     }
   }
-  a.new {
-    @include edit_link;
-    position:absolute;
-    left:0;
-    top:0;
-  }
-  &.admin {
-    margin:0 $gutter
-  }
 }
+

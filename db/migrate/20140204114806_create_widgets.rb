@@ -6,6 +6,7 @@ class CreateWidgets < ActiveRecord::Migration
       t.integer :resource_id
       t.string :resource_type
       t.string :sort, index: true
+      t.string :style
 
       t.timestamps
     end

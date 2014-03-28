@@ -1,11 +1,21 @@
 @import 'includes';
 
 form {
-  input,
-  label {
+  input[type='text'],
+  input[type='password'],
+  input[type='number'],
+  input[type='email'],
+  label,
+  textarea {
     display:block;
-    width:400px;
-    margin:$gutter/4 0;
+    width:100%;
+    margin:$gutter 0;
+  }
+  label {
+    line-height: 1em;
+  }
+  textarea {
+    height:20em;
   }
   input {
     border:1px solid $keyline_grey;
@@ -15,11 +25,11 @@ form {
     border:none;
     padding:0;
   }
-  button {
+  button, input[type='submit'] {
     padding:5px;
     border:1px solid $keyline_grey;
     background: $blue;
     color:$white;
-    margin:$gutter/4 0;
+    margin:$gutter 0;
   }
 }

@@ -1,13 +1,11 @@
 class Admin::WidgetsController < ApplicationController
   before_action :set_widget, only: [:edit, :update, :destroy]
+  before_action :get_resources, only: [:new, :create]
 
   # GET /widgets/new
   def new
     @widget = Widget.new page_id: params[:page], slot: params[:slot]
     session[:page_id] = @widget.page.id
-    @news = News.all
-    @maps = Map.all
-    @articles = Article.all
   end
 
   # GET /widgets/1/edit
@@ -59,5 +57,12 @@ class Admin::WidgetsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def widget_params
       params.require(:widget).permit(:page_id, :slot, :resource_id, :resource_type)
+    end
+
+    def get_resources
+
+      @news = News.all
+      @maps = Map.all
+      @articles = Article.all
     end
 end

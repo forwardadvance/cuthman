@@ -35,5 +35,6 @@ module HasImage
       .merge(default_url: "/images/:style/missing_banner.png")
       .merge(s3_credentials)
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+    validates_attachment_content_type :banner, :content_type => /\Aimage\/.*\Z/
   end
 end

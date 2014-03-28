@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration
       t.text :intro
       t.text :content
       t.attachment :image
+      t.attachment :banner
 
       t.timestamps
     end

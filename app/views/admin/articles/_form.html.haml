@@ -1,30 +1,19 @@
 = form_for [:admin, @article], :html => { :multipart => true } do |f|
   =error_messages_for @article
 
-  .field
-    = f.label :title
-    %br/
-    = f.text_field :title
+  = f.label :title
+  = f.text_field :title
 
-  .field.tinymce
-    = f.label :intro
-    %br/
-    = f.text_area :intro, class: 'tinymce'
+  = f.label :intro
+  = f.text_area :intro, class: 'tinymce'
 
-  .field.tinymce
-    = f.label :content
-    %br/
-    = f.text_area :content
+  = f.label :content
+  = f.text_area :content
 
-  .field
-    = f.label :image
-    %br/
-    = f.file_field :image
+  = f.label :image
+  = f.file_field :image
 
-  .field
-    = f.label :banner
-    %br/
-    = f.file_field :image
+  = f.label :banner
+  = f.file_field :image
 
-  .actions
-    = f.submit
+  = f.submit

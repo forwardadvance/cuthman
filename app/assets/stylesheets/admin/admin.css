@@ -2,4 +2,5 @@
  *= require admin/base
  *= require admin/highlight_slots
  *= require admin/edit_links
+ *= require_tree ./resources/.
  */

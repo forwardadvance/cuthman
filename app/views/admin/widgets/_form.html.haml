@@ -1,17 +1,25 @@
 = form_for([:admin, @widget]) do |f|
   = error_messages_for @widget
-  = f.number_field :page_id
+  = f.text_field :page_id
   = f.text_field :slot
-  = f.number_field :resource_id
+  = f.text_field :resource_id
   = f.text_field :resource_type
-  = f.submit
 
+  %h2 New Content
+  %ul
+    - [News, Map, Article].each do |klass|
+      %li
+        %a{ href: [:admin, :new, klass] }
+          New
+          = klass.to_s
 
-  -[@news, @maps, @articles].each do |collection|
-    -if collection.length > 0
+  - [@news, @maps, @articles].each do |collection|
+    - if collection.length > 0
       %h2= collection[0].class.to_s.pluralize.titleize
       %ul.content
-        -collection.each do |resource|
+        - collection.each do |resource|
           %li
             %a{ href: "#", data: { resource_type: resource.class.to_s, resource_id: resource.id } }
-              =resource.title
+              = resource.title
+
+  = f.submit

@@ -1,0 +1,8 @@
+@import 'includes';
+
+.logged_in {
+  .slot {
+    min-height:$gutter*5;
+    border:1px dotted #ddd;
+  }
+}

@@ -11,6 +11,8 @@
  *= require base
  *= require typography
  *= require forms
+ *= require flash
+ *= require logged_in
  *= require font-awesome
  *= require font_awesome_overrides
  *= require header

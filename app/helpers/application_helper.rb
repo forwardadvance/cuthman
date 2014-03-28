@@ -12,7 +12,7 @@ module ApplicationHelper
     action = params[:action]
     version = @version ? "version_#{@version}" : nil
     {
-      class: ([controller, action, version] - [nil]).join(' ')
+      class: ([controller, action, version, ('logged_in' if logged_in?)] - [nil, false]).join(' ')
     }
   end
 

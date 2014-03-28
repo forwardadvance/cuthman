@@ -1,0 +1,23 @@
+@import 'includes';
+
+.admin.widgets.new,
+.admin.widgets.create {
+  #new_widget {
+    ul, li {
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    a {
+      display:block;
+      color: $body_grey;
+      padding:$gutter/2;
+      line-height:1em;
+      border-bottom:1px solid $keyline_grey;
+      text-decoration: none;
+    }
+    a:hover {
+      background:$light_blue;
+    }
+  }
+}

@@ -32,9 +32,9 @@ class LoginsController < ApplicationController
       login @login
       redirect_to :root
     else
-      fail_message = "Sorry, your login details are incorrect. Please check that you have entered the correct email address and password. <a href='#{password_reminder_path}'>Forgot your password?</a>"
+      fail_message = "Sorry, your login details are incorrect."
       if !params[:email].blank? || !params[:password].blank?
-        flash[:login_error] = fail_message
+        flash[:error] = fail_message
       end
       render :new, :status => :forbidden
     end

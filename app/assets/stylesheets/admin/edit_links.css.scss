@@ -23,3 +23,10 @@ a.edit_page, a.add_page {
   }
 }
 
+a.new {
+  @include edit_link;
+  position:absolute;
+  left:$gutter;
+  top:$gutter;
+}
+
