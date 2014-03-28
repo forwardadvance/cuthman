@@ -54,6 +54,19 @@ $(function () {
           var link = $(this);
           model.set('resourceType', link.data('resource-type'));
           model.set('resourceId', link.data('resource-id'));
+          model.set('submit', true);
+        });
+      }
+    };
+
+    var form = {
+      init: function () {
+        this.el = $('form#new_widget');
+        this.events();
+      },
+      events: function () {
+        model.events.on('submit', function () {
+          form.el.submit();
         });
       }
     };
@@ -62,6 +75,7 @@ $(function () {
     contentLinks.init();
     resourceIdField.init();
     resourceTypeField.init();
+    form.init();
 
     window.model = model;
   }

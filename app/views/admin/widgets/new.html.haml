@@ -1,4 +1,7 @@
 .slot.article
-  %h1 New widget
+  %h1
+    = @widget.slot
+    Widget
+    -#= @widget.page.metadata.title TODO fix metadata
 
   = render 'form'

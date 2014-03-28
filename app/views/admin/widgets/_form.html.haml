@@ -1,9 +1,9 @@
 = form_for([:admin, @widget]) do |f|
   = error_messages_for @widget
-  = f.text_field :page_id
-  = f.text_field :slot
-  = f.text_field :resource_id
-  = f.text_field :resource_type
+  = f.hidden_field :page_id
+  = f.hidden_field :slot
+  = f.hidden_field :resource_id
+  = f.hidden_field :resource_type
 
   %h2 New Content
   %ul
