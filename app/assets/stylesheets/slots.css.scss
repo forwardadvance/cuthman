@@ -2,7 +2,7 @@
 .slot {
   position:relative;
   margin: $gutter/2 0;
-  padding: 0 $gutter;
+  padding: $gutter/2;
   @include clearfix;
   &.third {
     float:left;

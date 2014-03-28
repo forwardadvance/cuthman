@@ -7,13 +7,13 @@
 
   %h2 New Content
   %ul
-    - [News, Map, Article].each do |klass|
+    - [News, Map, Article, Image].each do |klass|
       %li
-        %a{ href: [:admin, :new, klass] }
+        =link_to [:new, :admin, klass.to_s.underscore.to_s] do
           New
           = klass.to_s
 
-  - [@news, @maps, @articles].each do |collection|
+  - [@news, @maps, @articles, @images].each do |collection|
     - if collection.length > 0
       %h2= collection[0].class.to_s.pluralize.titleize
       %ul.content
