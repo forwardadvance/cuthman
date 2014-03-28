@@ -2,7 +2,7 @@
 .slot {
   position:relative;
   margin: $gutter/2 0;
-  padding: 0 $gutter/2;
+  padding: 0 $gutter;
   @include clearfix;
   &.third {
     float:left;
@@ -29,6 +29,14 @@
   &.widescreen {
     width:auto;
     clear:both;
+  }
+
+  &.banner {
+    width:auto;
+    clear:both;
+    img {
+      width:100%;
+    }
   }
 
   &.article {
