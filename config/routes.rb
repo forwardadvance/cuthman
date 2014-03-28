@@ -1,5 +1,10 @@
 Cuthman::Application.routes.draw do
 
+
+  get '/login' => 'logins#new', :as => :login
+  post '/login' => 'logins#create'
+  get '/logout' => 'logins#destroy', :as => :logout
+
   namespace :admin do
     resources :widgets, only: [:new, :create, :edit, :update, :destroy]
 

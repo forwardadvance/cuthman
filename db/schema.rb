@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208231420) do
+ActiveRecord::Schema.define(version: 20140327230704) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -40,6 +40,14 @@ ActiveRecord::Schema.define(version: 20140208231420) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+
+  create_table "logins", force: true do |t|
+    t.integer  "user_id"
+    t.string   "session_key"
+    t.datetime "expires"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "maps", force: true do |t|
     t.string   "title"
@@ -82,6 +90,15 @@ ActiveRecord::Schema.define(version: 20140208231420) do
     t.integer  "parent_id"
     t.string   "template"
     t.integer  "metadata_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

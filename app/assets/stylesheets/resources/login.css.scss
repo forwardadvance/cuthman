@@ -1,0 +1,14 @@
+@import 'includes';
+
+.logins.new, .logins.create {
+  .slot.article {
+    margin:$gutter*4 auto;
+  }
+  input {
+    width:100%;
+  }
+}
+
+.admin_slot {
+  margin:0 $gutter;
+}

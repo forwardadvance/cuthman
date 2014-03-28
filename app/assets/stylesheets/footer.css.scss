@@ -1,0 +1,17 @@
+@import 'includes';
+
+footer {
+  font-size:$base_font_size / $scaling_factor;
+  border-top:1px solid $keyline_grey;
+  margin:$gutter 0;
+  padding: $gutter 0;
+  ul, li {
+    list-style:none;
+    margin:0;
+    padding:0
+  }
+  a {
+    color:$body_grey;
+    text-decoration:none;
+  }
+}

@@ -31,6 +31,27 @@
     clear:both;
   }
 
+  &.article {
+    width:$widescreen / 2;
+    clear:both;
+    margin:$gutter auto;
+    @media (max-width: $widescreen - 1) {
+      & {
+        width: $desktop*0.66;
+      }
+    }
+    @media (max-width: $desktop - 1) {
+      & {
+        width: $tablet;
+      }
+    }
+    @media (max-width: $tablet - 1) {
+      & {
+        width:auto;
+      }
+    }
+  }
+
   &.desktop {
     width: $desktop/3;
     clear:both;
@@ -51,5 +72,8 @@
     position:absolute;
     left:0;
     top:0;
+  }
+  &.admin {
+    margin:0 $gutter
   }
 }

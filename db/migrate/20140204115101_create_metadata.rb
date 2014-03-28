@@ -1,7 +1,7 @@
 class CreateMetadata < ActiveRecord::Migration
   def change
     create_table :metadata do |t|
-      t.integer :page_id
+      t.integer :page_id, index: true
       t.string :title
       t.text :description
       t.text :keywords

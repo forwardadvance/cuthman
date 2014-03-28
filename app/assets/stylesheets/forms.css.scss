@@ -1,0 +1,25 @@
+@import 'includes';
+
+form {
+  input,
+  label {
+    display:block;
+    width:400px;
+    margin:$gutter/4 0;
+  }
+  input {
+    border:1px solid $keyline_grey;
+    padding:5px;
+  }
+  fieldset {
+    border:none;
+    padding:0;
+  }
+  button {
+    padding:5px;
+    border:1px solid $keyline_grey;
+    background: $blue;
+    color:$white;
+    margin:$gutter/4 0;
+  }
+}

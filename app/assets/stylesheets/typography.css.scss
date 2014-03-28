@@ -1,8 +1,5 @@
 @import 'includes';
 
-$base_font_size: 1em;
-$scaling_factor:1.5;
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size:110%;
@@ -34,4 +31,10 @@ h2, h3 {
   font-size:$base_font_size * $scaling_factor;
   line-height:1.1em;
   color:lighten($body_grey, 30%);
+}
+
+input, textarea, button {
+  font-size:1em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:400;
 }

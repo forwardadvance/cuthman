@@ -1,0 +1,15 @@
+.slot.article
+  - if flash[:login_error]
+    =error_messages_for(flash[:login_error], "Sorry, we couldn't log you in" )
+
+  = form_tag login_path, method: 'post' do
+    %fieldset
+      .row
+        %label{:for => "email"} email
+        %input#email{:type => "email", :value => @email, :name => "email", :autofocus => true, :required => true}
+      .row
+        %label{:for => "password"} password
+        %input{:type => "password", :value => params[:password], :name => "password", :required => true}
+
+    %button{ :type => "submit" }
+      Log in

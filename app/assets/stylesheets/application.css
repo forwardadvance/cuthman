@@ -10,6 +10,7 @@
  *
  *= require base
  *= require typography
+ *= require forms
  *= require font-awesome
  *= require font_awesome_overrides
  *= require header
@@ -18,5 +19,6 @@
  *= require widgets
  *= require maps
  *= require slot_controls
+ *= require_tree ./resources/.
  *= require_tree ./templates/.
  */

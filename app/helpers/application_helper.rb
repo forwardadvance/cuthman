@@ -16,9 +16,17 @@ module ApplicationHelper
     }
   end
 
+  def logged_in? args = {}
+    @current_user != nil && @login != nil
+  end
+
   def admin_user?
-    false
+    logged_in? and current_user.admin?
   end
   alias_method :admin?, :admin_user?
+
+  def current_user
+    @current_user
+  end
 
 end
