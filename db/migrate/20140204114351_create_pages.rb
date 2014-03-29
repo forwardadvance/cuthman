@@ -4,7 +4,6 @@ class CreatePages < ActiveRecord::Migration
       t.string :slug, index: true
       t.integer :parent_id
       t.string :template
-      t.integer :metadata_id
 
       t.timestamps
     end

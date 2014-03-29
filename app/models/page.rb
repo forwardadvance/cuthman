@@ -1,15 +1,16 @@
 class Page < ActiveRecord::Base
 
-  has_one :metadatum
-  has_many :widgets
+  extend HasMetadata
+
   belongs_to :parent, :class_name => 'Page',
                       :foreign_key => 'parent_id'
   has_many :children, :class_name => 'Page',
                       :foreign_key => 'parent_id'
 
-  after_create :make_metadata
-
   validates_presence_of :template
+  validates_presence_of :slug
+
+  # has_many :articles
 
   class << self
 
@@ -37,8 +38,4 @@ class Page < ActiveRecord::Base
     path
   end
 
-  def make_metadata
-    self.metadatum = Metadatum.create title: slug.titleize
-    self.save
-  end
 end
