@@ -7,10 +7,10 @@ class Page < ActiveRecord::Base
   has_many :children, :class_name => 'Page',
                       :foreign_key => 'parent_id'
 
+  has_many :widgets
+
   validates_presence_of :template
   validates_presence_of :slug
-
-  # has_many :articles
 
   class << self
 

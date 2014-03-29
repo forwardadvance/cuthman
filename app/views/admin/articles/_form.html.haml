@@ -17,7 +17,7 @@
   = f.label :banner
   = f.file_field :banner
 
-
+  = render partial: 'admin/has_page/form', locals: {f: f }
 
   %br
   = f.submit

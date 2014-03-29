@@ -30,3 +30,24 @@ a.new {
   top:$gutter;
 }
 
+nav.new_content_links {
+  position:absolute;
+  top:0;
+  right:0;
+  border:1px solid $keyline_grey;
+  padding:0 $gutter;
+  ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  a {
+    display:block;
+    color:$body_grey;
+    text-decoration: none;
+    border-top:1px solid $keyline-grey;
+  }
+  li:first-child a {
+    border-top:none;
+  }
+}

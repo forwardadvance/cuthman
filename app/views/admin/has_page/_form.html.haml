@@ -1,0 +1,7 @@
+%h2 Create a page
+
+%ul
+  -Page.all.each do |page|
+    %li
+      =f.radio_button :parent_page_id, page.id
+      =f.label :"parent_page_id_#{page.id}", page.path

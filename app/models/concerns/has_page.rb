@@ -7,11 +7,25 @@ module HasPage
   end
 
   module InstanceMethods
-    attr_accessor :parent_page_id
 
     def make_page
-      self.page = Page.create parent_id: parent_page_id, slug: title.underscore, template: 'article' #TODO Fix this when underscore is a duplicate
+      self.page = Page.create parent_id: parent_page_id, slug: title.underscore, template: 'article' #TODO Fix this when slug is a duplicate
       self.save
+    end
+
+    def parent_page_id=(id)
+      page = self.page
+      if page
+        page.parent_id = id
+        page.save
+      else
+        make_page
+      end
+    end
+
+    def parent_page_id
+      page = self.page
+      return page ? page.parent_id : nil
     end
   end
 end
