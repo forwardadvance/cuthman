@@ -1,5 +1,4 @@
 module SlotHelper
-
   def slot slot_name, style, args={}
     limit = args[:limit] || 1
     output = []

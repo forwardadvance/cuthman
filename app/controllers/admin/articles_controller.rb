@@ -28,7 +28,7 @@ class Admin::ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to last_edited_page_path, notice: 'Article was successfully created.' }
+        format.html { redirect_to @article.page.path, notice: 'Article was successfully created.' }
         format.json { render action: 'show', status: :created, location: @article }
       else
         format.html { render action: 'new' }
@@ -69,6 +69,6 @@ class Admin::ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :intro, :content, :image, :banner)
+      params.require(:article).permit(:title, :intro, :content, :image, :banner, :parent_page_id)
     end
 end
