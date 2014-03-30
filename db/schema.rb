@@ -113,7 +113,6 @@ ActiveRecord::Schema.define(version: 20140329101530) do
     t.string   "slug"
     t.integer  "parent_id"
     t.string   "template"
-    t.integer  "metadata_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -133,6 +132,7 @@ ActiveRecord::Schema.define(version: 20140329101530) do
     t.integer  "resource_id"
     t.string   "resource_type"
     t.string   "sort"
+    t.string   "style"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

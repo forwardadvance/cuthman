@@ -1,8 +1,16 @@
 module HasImage
 
-  def self.extended(klass)
-    klass.add_attachments
+  def self.included(klass)
     klass.extend ClassMethods
+    klass.add_attachments
+  end
+
+  def image_upload_url=(url)
+    self.image = URI.parse(url)
+  end
+
+  def banner_upload_url=(url)
+    self.banner = URI.parse(url)
   end
 
   module ClassMethods
@@ -32,14 +40,14 @@ module HasImage
     end
 
     def add_attachments
-      has_attached_file :image, image_styles
+      self.has_attached_file :image, image_styles
         .merge(default_url: "/images/:style/missing.png")
         .merge(s3_credentials)
-      has_attached_file :banner, banner_styles
+      self.has_attached_file :banner, banner_styles
         .merge(default_url: "/images/:style/missing_banner.png")
         .merge(s3_credentials)
-      validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-      validates_attachment_content_type :banner, :content_type => /\Aimage\/.*\Z/
+      self.validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+      self.validates_attachment_content_type :banner, :content_type => /\Aimage\/.*\Z/
     end
   end
 end

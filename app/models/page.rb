@@ -2,6 +2,7 @@ class Page < ActiveRecord::Base
 
   include HasMetadata
   include HasHierarchy
+  include Sluggable
 
   has_many :widgets
 
