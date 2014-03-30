@@ -23,6 +23,8 @@
     @media (max-width: $tablet - 1) {
       & {
         width:auto;
+        float:none;
+        height:auto;
       }
     }
   }
