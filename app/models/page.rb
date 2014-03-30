@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
 
-  extend HasMetadata
-  extend HasHierarchy
+  include HasMetadata
+  include HasHierarchy
 
   has_many :widgets
 
