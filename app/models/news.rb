@@ -4,8 +4,8 @@ class News < ActiveRecord::Base
 
   acts_as_widget
 
-  extend HasImage
-  extend Widgetable
-  extend HasPage
+  include HasImage
+  # extend Widgetable
+  include HasPage
 
 end
