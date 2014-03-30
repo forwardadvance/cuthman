@@ -3,7 +3,7 @@ module SlotHelper
     limit = args[:limit] || 1
     output = []
     widgets = @page.widgets.where(slot: slot_name).order(:sort)
-    unless widgets.blank? || admin?
+    if !widgets.blank? || admin?
       output << "<div class='slot #{slot_name} #{style}' data-limit='#{limit}' data-count='#{widgets.count}'>"
       widgets.each do |widget|
         output << widget(widget, style)
