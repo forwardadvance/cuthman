@@ -25,14 +25,12 @@ module HasPage
       if page
         page.parent_id = id
         page.save
-      else
-        make_page
       end
     end
 
     def parent_page_id
       page = self.page
-      return page ? page.parent_id : @parent_page_id
+      return @parent_page_id || (page ? page.parent_id : nil)
     end
   end
 end
