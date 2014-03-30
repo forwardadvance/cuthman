@@ -1,4 +1,4 @@
-=link_to page_path
-=image_tag @article.image.url(:landscape)
+= link_to @article.page.path do
+  = image_tag @article.image.url(:landscape)
 
-%h2= @article.title.html_safe
+  %h2= @article.title.html_safe

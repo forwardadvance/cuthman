@@ -16,7 +16,7 @@ about = Article.create title: 'About',
 
 
 # Services
-Article.create title: "Sunday services",
+sunday = Article.create title: "Sunday services",
   parent_page_id: about.page.id,
   image_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/bench.jpg",
   banner_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/bench.jpg",
@@ -27,8 +27,14 @@ Article.create title: "Sunday services",
 <p>We’d love you to join us for the café at 11am before our service starts at 11.30. It’s a great opportunity to meet new friends, catch up with old friends and hear about what’s happening at St Cuthman’s.</p>
 <p>Our Sunday services are about making friends, worshipping God freely, hearing a short life impacting talk (hopefully!)and praying for any needs people may have.</p>"
 
+Widget.create page: about.page,
+  slot:'bottom_left',
+  resource_type: Article.to_s,
+  resource_id: sunday.id,
+  sort:2
 
-Article.create title: "Alpha",
+
+alpha = Article.create title: "Alpha",
   parent_page_id: about.page.id,
   image_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/alpha.jpg",
   banner_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/alpha.jpg",
@@ -38,7 +44,7 @@ Article.create title: "Alpha",
 <p>Each week we have dinner together, listen to a short talk and then have a discussion in a small group. The next Alpha course is starting on Wednesday 5th February 2014 and will be running every Wednesday from 7-9pm for 7 weeks. Come along to the first session and see what you think.</p>"
 
 
-Article.create title: "Kids church",
+kids = Article.create title: "Kids church",
   parent_page_id: about.page.id,
   image_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/kids.jpg",
   banner_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/kids.jpg",
@@ -49,7 +55,13 @@ Article.create title: "Kids church",
 <p>8 - 11’s Games, discussion, craft, Bible sound-bite</p>"
 
 
-Article.create title: "Hubs",
+Widget.create page: about.page,
+  slot:'bottom_middle',
+  resource_type: Article.to_s,
+  resource_id: kids.id,
+  sort:2
+
+hubs = Article.create title: "Hubs",
   parent_page_id: about.page.id,
   image_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/hubs.jpg",
   banner_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/hubs.jpg",
@@ -58,7 +70,7 @@ Article.create title: "Hubs",
   <p>To join a Hub or just find out more please visit the welcome desk on a Sunday or email richandcathstcuthmans@gmail.com</p>"
 
 
-Article.create title: "Safehaven Women",
+safehaven = Article.create title: "Safehaven Women",
   parent_page_id: about.page.id,
   image_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/safehaven.jpg",
   banner_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/safehaven.jpg",
@@ -68,7 +80,7 @@ Article.create title: "Safehaven Women",
 
 
 # News
-Article.create title: "News",
+news = Article.create title: "News",
   image_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/table.jpg",
   banner_upload_url:"http://st-cuthmans.s3.amazonaws.com/seed/table.jpg",
   parent_page_id: root.id,
@@ -78,6 +90,19 @@ Article.create title: "News",
 <p>We have a Table Top and Jumble sale on the last Saturday of everything month (except December). We have lots of new and used items to sell. We hope you'll find some useful bargains. A light lunch and refreshments are available.</p>
 <p>The next sale will be on 22nd February 2014 10:30-12pm.</p>
 <p>You can hire a table and sell your own items for £5. Please contact Jan for information on how you can help with the set up and selling.!</p>"
+
+
+Widget.create page: news.page,
+  slot:'bottom_left',
+  resource_type: Article.to_s,
+  resource_id: safehaven.id,
+  sort:2
+
+Widget.create page: news.page,
+  slot:'bottom_middle',
+  resource_type: Article.to_s,
+  resource_id: alpha.id,
+  sort:2
 
 # Media
 Article.create title: "Media",
@@ -89,8 +114,23 @@ Article.create title: "Media",
 
 
 
+Widget.create page: root,
+  slot:'left',
+  resource_type: Article.to_s,
+  resource_id: alpha.id,
+  sort:2
 
+Widget.create page: root,
+  slot:'middle',
+  resource_type: Article.to_s,
+  resource_id: sunday.id,
+  sort:2
 
+Widget.create page: root,
+  slot:'right',
+  resource_type: Article.to_s,
+  resource_id: kids.id,
+  sort:2
 
 
 map = Map.create lat:50.828385,
